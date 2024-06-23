@@ -1,0 +1,88 @@
+entity-relationship-diagram
+
+users [icon: user]{
+  id string pk
+  branchId string
+  name string
+  email string
+}
+accounts [icon: credit-card]{
+  id string pk
+  userId string
+  balanceId string
+}
+balances [icon: dollar-sign]{
+  id string pk
+  amount decimal
+}
+payments [icon: send]{
+  id string pk
+  accountId string
+  amount decimal
+  recipientId string
+}
+loans [icon: file-text]{
+  id string pk
+  accountId string
+  loanOfficerId string
+  amount decimal
+}
+loanOfficers [icon: user-check]{
+  id string pk
+  name string
+  branchId string
+}
+branches [icon: building]{
+  id string pk
+  bankId string
+  address string
+}
+banks [icon: bank]{
+  id string pk
+  name string
+}
+transactions [icon: repeat]{
+  id string pk
+  accountId string
+  typeId string
+  amount decimal
+}
+transactionTypes [icon: list]{
+  id string pk
+  name string
+}
+cards [icon: credit-card]{
+  id string pk
+  accountId string
+  typeId string
+}
+cardTypes [icon: clipboard]{
+  id string pk
+  name string
+}
+alerts [icon: bell]{
+  id string pk
+  userId string
+  typeId string
+}
+alertTypes [icon: alert-circle]{
+  id string pk
+  name string
+}
+
+users.accounts <> accounts.id
+users.branchId > branches.id
+accounts.balanceId > balances.id
+payments.accountId > accounts.id
+payments.recipientId > users.id
+loans.accountId > accounts.id
+loans.loanOfficerId > loanOfficers.id
+loanOfficers.branchId > branches.id
+branches.bankId > banks.id
+transactions.accountId > accounts.id
+transactions.typeId > transactionTypes.id
+cards.accountId > accounts.id
+cards.typeId > cardTypes.id
+alerts.userId > users.id
+alerts.typeId > alertTypes.id
+
