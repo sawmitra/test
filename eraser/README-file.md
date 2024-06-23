@@ -2,6 +2,10 @@
 
 how are you boss??
 
+![AirPlay](/.eraser/oBqmzY1p8XcX6QEzixnY___OR10FHHD1DU1dB74h0e8mYZD0KY2___---figure---2iE4GrEZ_JRm5ZKnz32UN---figure---WsbrPiTJP1s17TcKY5LAPA.png "AirPlay")
+
+
+
 
 
 <!--- Eraser file: https://app.eraser.io/workspace/oBqmzY1p8XcX6QEzixnY --->
